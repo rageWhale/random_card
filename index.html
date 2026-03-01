@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/iconfont/iconfont.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="manifest" href="./manifest.json">
+  <title>Random Card Cooser</title>
+  <script type="module" src="./js/main.js" defer></script>
+</head>
+
+<body>
+  <div class="randomCard">
+    <div class="cardInner">
+      <!-- Front -->
+      <div class="cardFront active">
+        <h2>Random Card</h2>
+        <div class="uploads">
+          <input type="text" id="cardName" placeholder="Card Name">
+          <input type="file" id="upload" accept="image/*" style="display: none;">
+          <label for="upload" class="uploadLab"><i class="iconfont icon-shangchuan"></i>upload</label>
+          <button id="addCard"></button>
+          <button class="setUp"></button>
+        </div>
+        <div class="cardBox">
+          <img src="./assets/images/default.png" alt="">
+        </div>
+        <div class="action">
+          <div class="btn">
+            <button class="start">Start</button>
+            <button class="stop" disabled>Stop</button>
+            <button class="reset"><i class="iconfont icon-shuaxin"></i></button>
+          </div>
+        </div>
+      </div>
+      <!-- Back -->
+      <div class="cardBack">
+        <h2>Card Manager</h2>
+        <div class="cardSearch">
+          <input type="text" class="search" placeholder="Search by name">
+          <button class="searchBtn"><i class="iconfont icon-search"></i></button>
+          <button class="backBtn"><i class="iconfont icon-back"></i></button>
+          <button class="setUp"></button>
+        </div>
+        <div class="cardManager">
+          <ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
