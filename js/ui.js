@@ -8,9 +8,9 @@ function render(dataArr) {
   const dataWrite = dataArr.map((ele) => {
     return `
       <li>
-        <a href="#"><img src="${ele.url}" alt=""></a>
-        <p>${ele.name}</p>
-        <button class="delete" data-id="${ele.id}">
+        <a href="#" class="no-select"><img src="${ele.url}" alt=""></a>
+        <p class="no-select">${ele.name}</p>
+        <button class="delete no-select" data-id="${ele.id}">
           <i class="iconfont icon-ashbin"></i>
         </button>
       </li>
