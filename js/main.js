@@ -21,6 +21,8 @@ import {
   clearSearch
 } from "./ui.js"
 
+import AudioManager from "./audio.js"
+
 // -----------------------------
 // Global State
 // -----------------------------
@@ -94,7 +96,10 @@ const backBtn = document.querySelector(".backBtn")
 
 // Random Card
 start.addEventListener("click", function () {
+  AudioManager.playStartSound()
+  AudioManager.playScrollSound()
   if (tempArr.length === 0) {
+    AudioManager.playPromptSound()
     alert("No cards left, please reset!")
     return
   }
@@ -109,6 +114,8 @@ start.addEventListener("click", function () {
 })
 
 stop.addEventListener("click", function () {
+  AudioManager.playStopSound()
+  AudioManager.stopScrollSound()
   stop.disabled = true
   start.disabled = false
   clearInterval(timerID)
@@ -117,6 +124,7 @@ stop.addEventListener("click", function () {
   if (tempArr.length === 0) {
     start.disabled = true
     stop.disabled = true
+    AudioManager.playPromptSound()
     alert("All cards finished! Please reset.")
   }
 })
