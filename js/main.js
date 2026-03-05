@@ -97,11 +97,12 @@ const backBtn = document.querySelector(".backBtn")
 // Random Card
 start.addEventListener("click", function () {
   AudioManager.playStartSound()
-  AudioManager.playScrollSound()
   if (tempArr.length === 0) {
     AudioManager.playPromptSound()
     alert("No cards left, please reset!")
     return
+  } else {
+    AudioManager.playScrollSound()
   }
 
   start.disabled = true
